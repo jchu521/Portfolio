@@ -48,12 +48,12 @@ hr {
     margin: 0!important;
 }
 
+
 .userPhoto {
-    position: fixed;
-    vertical-align: middle;
+
     width: 150px;
     height: 150px;
-    margin: 5% 0;
+    margin: 0 0;
     border-radius: 50%;
 }
 
@@ -63,6 +63,11 @@ hr {
 
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
+    .navbar-brand {
+        position: fixed;
+        vertical-align: middle;
+        margin-top: 5rem;
+    }
     /* Styles */
     .box {
         display: flex;

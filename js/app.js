@@ -10,31 +10,42 @@ $(window).on('load', function(){
 // check initial screen size
 const defaultScreenSize = () => {
     var maxwidth = $( document ).width();
+    var maxHeight = $(document).height();
 
     if ( maxwidth >= 1207 ) {
         $(".nav-ul").addClass("flex-column");
         $(".nav-nav").addClass("flex-column");
-        $(".navbar-brand").addClass("sr-only");
+        $(".name").addClass("sr-only");
         $(".userPhoto").removeClass("sr-only");
+    }
+
+    if(maxHeight <= 6059){
+        $(".userPhoto").addClass("sr-only");
+
     }
 }
 
 // adjust window size 
 $(window).resize(function() {
     var maxwidth = $( document ).width();
+    var maxHeight = $(document).height();
 
     if ( maxwidth >= 1207 ) {
         $(".nav-ul").addClass("flex-column");
         $(".nav-nav").addClass("flex-column");
-        $(".navbar-brand").addClass("sr-only");
+        $(".name").addClass("sr-only");
         $(".userPhoto").removeClass("sr-only");
     }else{
         if($(".nav-ul").hasClass("flex-column") && $(".nav-nav").hasClass("flex-column")){
             $(".nav-ul").removeClass("flex-column");        
             $(".nav-nav").removeClass("flex-column");   
-            $(".navbar-brand").removeClass("sr-only");
+            $(".name").removeClass("sr-only");
            $(".userPhoto").addClass("sr-only");
         }
+    }
+
+    if(maxHeight <= 6059){
+        $(".userPhoto").addClass("sr-only");
     }
 });
 
