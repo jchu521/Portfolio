@@ -19,9 +19,8 @@ const defaultScreenSize = () => {
         $(".userPhoto").removeClass("sr-only");
     }
 
-    if(maxHeight <= 6059){
+    if(maxHeight <= 5689){
         $(".userPhoto").addClass("sr-only");
-
     }
 }
 
@@ -44,7 +43,7 @@ $(window).resize(function() {
         }
     }
 
-    if(maxHeight <= 6059){
+    if(maxHeight <= 5689){
         $(".userPhoto").addClass("sr-only");
     }
 });
