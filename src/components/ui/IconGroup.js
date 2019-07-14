@@ -67,7 +67,7 @@ const useStyles = makeStyles(
         backgroundColor: "#3f51b5"
       }
     },
-    badgeHover: { height: "20px !important", padding: "0 5px" }
+    badgeHover: { height: "20px !important", padding: "0 5px", color: "white" }
   })
 );
 

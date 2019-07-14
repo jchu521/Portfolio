@@ -32,7 +32,7 @@ const useStyles = makeStyles(
 
 function Main() {
   const classes = useStyles();
-  const [page, setPage] = useState("Education");
+  const [page, setPage] = useState("Experience");
 
   return (
     <>
