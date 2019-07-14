@@ -85,7 +85,7 @@ const directionIcon = [
 
 const skillIcons = [
   {
-    type: "Front End",
+    type: "Frontend",
     icons: [
       {
         name: "react",
@@ -176,7 +176,7 @@ const skillIcons = [
     ]
   },
   {
-    type: "Back End",
+    type: "Backend",
     icons: [
       {
         name: "node",
