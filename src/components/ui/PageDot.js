@@ -19,7 +19,6 @@ function PageDot(props) {
   const Dots = () => {
     const { index, page } = props;
     const array = [];
-    console.log(page);
 
     for (let i = 1; i < index + 1; i++) {
       array.push(
@@ -33,7 +32,6 @@ function PageDot(props) {
         />
       );
     }
-    console.log(array);
     return array;
   };
 

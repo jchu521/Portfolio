@@ -16,7 +16,8 @@ const useStyles = makeStyles(theme => ({
   },
   loadingText: {
     position: "absolute",
-    margin: 0
+    margin: 0,
+    color: "#3f51b5"
   }
 }));
 
@@ -26,7 +27,6 @@ function Loading() {
 
   useEffect(() => {
     function tick() {
-      // reset when reaching 100%
       setProgress(oldProgress => (oldProgress >= 100 ? 0 : oldProgress + 1));
     }
 
