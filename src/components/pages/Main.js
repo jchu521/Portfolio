@@ -11,7 +11,7 @@ import { makeStyles, createStyles } from "@material-ui/core/styles";
 import Background from "../../static/Port_2_Background.jpg";
 import ButtonGroup from "../ui/ButtonGroup";
 
-const useStyles = makeStyles(
+const useStyles = makeStyles(theme =>
   createStyles({
     MainSection: {
       backgroundImage: `url(${Background})`,
@@ -25,7 +25,10 @@ const useStyles = makeStyles(
     bodySection: {
       margin: "0vw 10vw",
       height: "55vh",
-      color: "black"
+      color: "black",
+      [theme.breakpoints.down("sm")]: {
+        paddingTop: 200
+      }
     }
   })
 );

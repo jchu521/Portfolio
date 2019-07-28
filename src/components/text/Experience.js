@@ -1,3 +1,5 @@
+import icons from "./Icons";
+
 const experience = [
   {
     index: 1,
@@ -6,7 +8,59 @@ const experience = [
       "<a style='color:black;' href='https://talentscreen.mvsi.com'>https://talentscreen.mvsi.com</a>",
     role: "Software Engineer",
     workPeriod: "December 2018 ~ Present",
-    body: "",
+    width: {
+      xs: 12,
+      md: 4
+    },
+    section: [
+      {
+        title: "Duties and Responsibility",
+        body: [
+          "Develop and implement new software programs",
+          "Maintain and improve the performance of existing software",
+          "Design and update software, databases, and architectures.",
+          "Test and maintain software products to ensure strong functionality and optimization.",
+          "Recommend improvements to existing software programs as necessary."
+        ],
+        image: icons.faListAlt,
+        hide: true
+      },
+      {
+        title: "Projects",
+        body: [
+          "Multi languages system",
+          "Action center",
+          "Dashboard page",
+          "Customizable email templates",
+          "Client sales form",
+          "Help desk support system",
+          "Excel exporter",
+          "Weekly report emailing system",
+          "Test systems",
+          "Website configuration"
+        ],
+        image: icons.faTasks,
+
+        hide: true
+      },
+      {
+        title: "Tools",
+        body: [
+          "React",
+          "Next.js",
+          "Meteor.js",
+          "Node.js",
+          "TypeScript",
+          "MongoDB",
+          "Git",
+          "Jira",
+          "BrowerStack",
+          "SendGrid"
+        ],
+        image: icons.faTools,
+        hide: true
+      }
+    ],
     list: [
       "Used React.js, Node.js and MongoDB to build and maintain website.",
       "Developed a multi languages system, support eight languages in website.",
@@ -29,12 +83,45 @@ const experience = [
     website: "",
     role: "Intern",
     workPeriod: "April 2018 ~ September 2018",
-    body:
-      'The aim of this project is to develop and design the Tic Tac Toe AI mobile app. The app is published on &nbsp;<a alt="Google Play Store" style="color:black;" href="https://play.google.com/store/apps/details?id=com.mit.tictactoeai">Google Play Store</a> &nbsp; and &nbsp;<a alt="Apple Store" style="color:black;" href="https://apps.apple.com/us/app/tic-tac-toe-ai/id1419451065">Apple Store</a>. The source code can be found in &nbsp;<a alt="Github"style={{ textDecoration: "none" }}href="https://github.com/jchu521/React_Native_TicTacToe">Github</a>&nbsp; and for more information can check out the &nbsp;<a alt="support website" style="color:black;" href="https://tictactoegame.wordpress.com/">support website</a>.',
-    list: [
-      "Supported multiplayer over network",
-      "Supported all devices and tablets",
-      "Players can play against the computer with different levels"
+    width: {
+      xs: 12,
+      md: 4
+    },
+    section: [
+      {
+        title: "Aim",
+        body:
+          "The aim of this project is to develop and design the Tic Tac Toe AI mobile app. The app is published on &nbsp;. ",
+        image: icons.faBullseye,
+        hide: true
+      },
+      {
+        title: "Support Features",
+        body: [
+          "Multiplayer over network",
+          "All devices and tablets",
+          "Players can play against the computer with different levels"
+        ],
+        image: icons.faListUl,
+        hide: true
+      },
+      {
+        title: "Tools and Resource",
+        column: 1,
+        isLink: true,
+        body: [
+          "React Native",
+          "Git",
+          "Php",
+          "Apache",
+          '<a alt="Google Play Store" style="color:white;" href="https://play.google.com/store/apps/details?id=com.mit.tictactoeai">Google Play Store</a>',
+          '<a alt="Apple Store" style="color:white;" href="https://apps.apple.com/us/app/tic-tac-toe-ai/id1419451065">Apple Store</a>',
+          '<a alt="Github" style="color:white;" href="https://github.com/jchu521/React_Native_TicTacToe">Github Source Code</a>',
+          '<a alt="support website" style="color:white;" href="https://tictactoegame.wordpress.com/">Support Website</a>.'
+        ],
+        image: icons.faTools,
+        hide: true
+      }
     ]
   }
 ];

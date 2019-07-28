@@ -9,9 +9,17 @@ import {
   faChevronDown,
   faChevronUp,
   faCircle,
-  faCircleNotch
+  faCircleNotch,
+  faFilePdf,
+  faTools,
+  faTasks,
+  faListAlt,
+  faDotCircle,
+  faBullseye,
+  faListUl
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import CV from "../../static/Jonathan_Chueh.pdf";
 
 library.add(
   faGithub,
@@ -22,7 +30,14 @@ library.add(
   faChevronDown,
   faChevronUp,
   faCircle,
-  faCircleNotch
+  faCircleNotch,
+  faFilePdf,
+  faTools,
+  faTasks,
+  faListAlt,
+  faDotCircle,
+  faBullseye,
+  faListUl
 );
 
 const iconsButton = [
@@ -48,6 +63,12 @@ const iconsButton = [
     phone: "tel:+61 0426688129",
     hover: "Phone: +61 0426688129",
     text: "+61 0426688129",
+    hideBadge: true
+  },
+  {
+    name: faFilePdf,
+    download: CV,
+    hover: "Resume",
     hideBadge: true
   }
 ];
@@ -367,5 +388,11 @@ export default {
   directionIcon,
   faCircle,
   faCircleNotch,
-  skillIcons
+  skillIcons,
+  faTools,
+  faTasks,
+  faListAlt,
+  faDotCircle,
+  faBullseye,
+  faListUl
 };

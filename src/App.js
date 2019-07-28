@@ -11,8 +11,8 @@ const useStyles = makeStyles(
   createStyles({
     app: {
       height: "100vh",
-      fontFamily: "roboto",
-      backgroundColor: "lightgray"
+      fontFamily: "roboto"
+      // backgroundColor: "lightgray"
     }
   })
 );

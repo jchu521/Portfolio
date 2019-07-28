@@ -1,6 +1,6 @@
 import React from "react";
 //material ui
-import { makeStyles, createStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 //static
 import photo from "../../static/Jonathan_Chueh.jpg";
@@ -39,35 +39,50 @@ const AboutBody = styled.p`
   animation-duration: 1s;
 `;
 
-const useStyles = makeStyles(
-  createStyles({
-    aboutSection: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      textAlign: "center"
-    },
-
-    aboutHeader: {
-      fontSize: "2rem",
-      margin: 0
-    },
-
-    aboutBody: {
-      width: "50vw",
-      lineHeight: 2,
-      fontSize: 18,
-      animation: "flash linear 1s slidein"
-    },
-
-    bigAvatar: {
-      margin: 10,
-      width: 120,
-      height: 120
+const useStyles = makeStyles(theme => ({
+  aboutSection: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: 80
     }
-  })
-);
+  },
+
+  aboutHeader: {
+    margin: 0,
+    fontSize: "2rem",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.2rem",
+      lineHeight: 1.4
+    }
+  },
+
+  aboutBody: {
+    width: "50vw",
+    lineHeight: 2,
+    fontSize: 18,
+    [theme.breakpoints.down("sm")]: {
+      width: "80vw"
+    }
+  },
+  aboutText: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 16,
+      lineHeight: 1.4
+    }
+  },
+  bigAvatar: {
+    margin: 10,
+    width: 120,
+    height: 120,
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
+  }
+}));
 
 function About() {
   const classes = useStyles();
@@ -80,7 +95,7 @@ function About() {
         <AboutHeader className={classes.aboutHeader}>
           {aboutText.header}
         </AboutHeader>
-        <AboutBody>{aboutText.body}</AboutBody>
+        <AboutBody className={classes.aboutText}>{aboutText.body}</AboutBody>
       </span>
     </section>
   );

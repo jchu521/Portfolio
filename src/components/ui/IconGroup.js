@@ -126,7 +126,9 @@ function IconGroup() {
                       ? icon.link
                       : icon.email
                       ? icon.email
-                      : icon.phone,
+                      : icon.phone
+                      ? icon.phone
+                      : icon.download,
                     "_blank"
                   );
                 }}>
