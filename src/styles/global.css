@@ -1,0 +1,108 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --nav-h: 56px;
+  --sticky-nav-top: 0px;
+  --journey-cols: minmax(0, 170px) 1fr;
+  --journey-tools-dir: column;
+  --journey-tools-gap: 3px;
+  --journey-tools-pad: 0;
+  --journey-tools-border: none;
+  --journey-tools-radius: 0;
+  --skills-toggle-display: inline;
+  --accent: #4f8ef7;
+  --red: #e84057;
+}
+
+:root[data-theme="dark"], :root:not([data-theme]) {
+  --bg: #0a0d12;
+  --surface: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --fg: #f0ece4;
+  --fg2: rgba(240,236,228,0.62);
+  --body: rgba(240,236,228,0.85);
+  --bio-fg: rgba(240,236,228,0.78);
+  --stat-grad-1: #ffffff;
+  --stat-grad-2: rgba(255,255,255,0.55);
+  --chip-bg: rgba(255,255,255,0.04);
+  --chip-border: rgba(255,255,255,0.09);
+  --chip-fg: rgba(255,255,255,0.7);
+  --stats-bg: rgba(255,255,255,0.05);
+  --rail-active-bg: rgba(255,255,255,0.08);
+  --rail-active-border: rgba(255,255,255,0.25);
+  --rail-track: rgba(255,255,255,0.06);
+  --nav-bg: rgba(10,13,18,0.9);
+  --nav-pill-bg: rgba(255,255,255,0.05);
+  --sticky-rail-bg: rgba(10,13,18,0.92);
+  --hub-bg: rgba(10,13,18,0.88);
+  --leaf-bg: rgba(10,13,18,0.9);
+  --sphere-stroke: rgba(255,255,255,0.03);
+  --scrollbar-thumb: rgba(255,255,255,0.12);
+  --selection-fg: #ffffff;
+  --accent: #4f8ef7;
+  --red: #e84057;
+  --avatar-border: rgba(79,142,247,0.5);
+  --avatar-glow: rgba(79,142,247,0.08);
+}
+
+:root[data-theme="light"] {
+  --bg: #faf7f0;
+  --surface: rgba(20,20,20,0.025);
+  --border: rgba(20,20,20,0.12);
+  --fg: #15161a;
+  --fg2: rgba(20,20,20,0.7);
+  --body: rgba(20,20,20,0.82);
+  --bio-fg: rgba(20,20,20,0.78);
+  --stat-grad-1: #15161a;
+  --stat-grad-2: rgba(20,20,20,0.65);
+  --chip-bg: rgba(20,20,20,0.04);
+  --chip-border: rgba(20,20,20,0.1);
+  --chip-fg: rgba(20,20,20,0.72);
+  --stats-bg: rgba(20,20,20,0.05);
+  --rail-active-bg: rgba(20,20,20,0.06);
+  --rail-active-border: rgba(20,20,20,0.2);
+  --rail-track: rgba(20,20,20,0.1);
+  --nav-bg: rgba(250,247,240,0.88);
+  --nav-pill-bg: rgba(20,20,20,0.06);
+  --sticky-rail-bg: rgba(250,247,240,0.92);
+  --hub-bg: rgba(250,247,240,0.92);
+  --leaf-bg: rgba(250,247,240,0.95);
+  --sphere-stroke: rgba(20,20,20,0.06);
+  --scrollbar-thumb: rgba(20,20,20,0.18);
+  --selection-fg: #ffffff;
+  --accent: #2563eb;
+  --red: #c8553d;
+  --avatar-border: rgba(20,20,20,0.2);
+  --avatar-glow: rgba(20,20,20,0.06);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection { background: var(--accent); color: var(--selection-fg); }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 2px; }
+
+@keyframes fadeUp   { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+@keyframes popIn    { 0% { opacity:0; transform:translateY(14px) scale(0.7); } 60% { opacity:1; transform:translateY(-2px) scale(1.05); } 100% { opacity:1; transform:translateY(0) scale(1); } }
+@keyframes leafFanIn { from { opacity:0; transform:translate(-50%,-50%) scale(0.3); } to { opacity:1; transform:translate(-50%,-50%) scale(1); } }
+@keyframes slideInL { from { opacity:0; transform:translateX(-40px); } to { opacity:1; transform:translateX(0); } }
+@keyframes scaleIn  { from { opacity:0; transform:scale(0.85); } to { opacity:1; transform:scale(1); } }
+@keyframes blink    { 0%,100%{opacity:1;} 50%{opacity:0;} }
+@keyframes dotPop   { 0%{transform:scale(0);opacity:0;} 70%{transform:scale(1.3);} 100%{transform:scale(1);opacity:1;} }
+@keyframes reveal   { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  :root { --nav-h: 48px; --sticky-nav-top: 48px; --journey-cols: 1fr; --journey-tools-dir: row; --journey-tools-gap: 6px; --journey-tools-pad: 3px 8px; --journey-tools-border: 1px solid var(--border); --journey-tools-radius: 12px; --skills-toggle-display: none; }
+}
